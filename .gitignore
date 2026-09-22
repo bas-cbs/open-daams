@@ -8,6 +8,7 @@ backups/
 node_modules/
 coverage/
 .scannerwork/
+docs/d6.4-requirements-traceability.xlsx
 next-env.d.ts
 npm-debug.log*
 *.tsbuildinfo
