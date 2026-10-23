@@ -4,7 +4,6 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
 }
 
 enum ApplicationType {
@@ -737,7 +736,6 @@ model RequestedDataset {
   dataHolderId  String
   dataHolder    DataHolder  @relation(fields: [dataHolderId], references: [id])
   name          String
-  url           String?
   // EU Dataset Catalogue identifiers (HD@EU/NCP wire: dataset_id, catalog_id)
   // — traceability references, not foreign keys into a local catalogue table
   // (open-daams doesn't own the catalogue, see CLAUDE.md's scope note).
@@ -1240,7 +1238,6 @@ model GrantedDataset {
   dataHolderId   String?
   dataHolder     DataHolder? @relation(fields: [dataHolderId], references: [id])
   name           String
-  url            String?
   // Frozen at issuance, like dataHolderName/name/url above — EU Dataset
   // Catalogue identifiers (dataset_id/catalog_id) and the wire format's
   // distributions[] ({ distributionId, title }), also fed into the signed
