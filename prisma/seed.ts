@@ -81,6 +81,7 @@ async function main() {
             {
               dataHolderId: dataHolderIdByName['CBS'],
               name: "Overleden inwoners van Nederland naar doodsoorzaak (uitgebreide lijst van 'drie-teken categorieën'), leeftijd en geslacht",
+	      url: 'https://acceptance.data.health.europa.eu/healthdata-central-platform/datasets/24b6a9b2-4519-4f94-8c0f-c4c85f295806?locale=nl',
             },
           ],
         },
